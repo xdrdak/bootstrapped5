@@ -4,77 +4,63 @@
 
 <head>
 
-<?php   Loader::element('header_required'); ?>
+  <?php   Loader::element('header_required'); ?>
 
-<!-- Site Header Content //-->
+  <!-- Site Header Content //-->
 
-<link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/reset.css" />
-<link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/text.css" />
+  <link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/reset.css" />
+  <link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/text.css" />
 
-<!--Bootstrap CSS goodness!-->
-<link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/bootstrap.css" />
-<link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/bootstrap-responsive.min.css" />
+  <!--Bootstrap CSS goodness!-->
+  <link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/bootstrap.css" />
+  <link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/bootstrap-responsive.min.css" />
 
 
-<link rel="stylesheet" href="<?php  echo $this->getThemePath(); ?>/css/960_24_col.css" />
-<link rel="stylesheet" media="screen" type="text/css" href="<?php  echo $this->getStyleSheet('main.css')?>" />
-<link rel="stylesheet" media="screen" type="text/css" href="<?php  echo $this->getStyleSheet('typography.css')?>" />
-<link href='//fonts.googleapis.com/css?family=Merriweather:400,700,900,300' rel='stylesheet' type='text/css' />
+
+  <link rel="stylesheet" media="screen" type="text/css" href="<?php  echo $this->getStyleSheet('main.css')?>" />
+  <link rel="stylesheet" media="screen" type="text/css" href="<?php  echo $this->getStyleSheet('typography.css')?>" />
+
 
 
 </head>
 
 <body>
+  <div id="wrap">
+  <!--This is the website's container -->
+  <div class="container">
 
-<!--This is the website's fixed navbar. Has to be outside the container -->
- <div class="navbar navbar-inverse" style="display:none;">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <?php  
-		$a = new GlobalArea('Site Name');
-		$a->display();
-		?>
-                    <div class="nav-collapse collapse">
-                       <form class="navbar-form pull-right">
-                            <input class="span2" type="text" placeholder="Email">
-                            <input class="span2" type="password" placeholder="Password">
-                            <button type="submit" class="btn">Sign in</button>
-                        </form>
-                    </div><!--/.nav-collapse -->
-                </div>
-            </div>
-        </div>
+    <div class="masthead">
 
-<!--This is the website's container -->
-<div class="container">
 
-<div class="masthead">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-                     <?php  
-			$a = new GlobalArea('Header Nav');
-			$a->display();
-			?>  
-        <span>	
+      <span>	
         <?php  
-		$a = new GlobalArea('Site Name');
-		$a->display();
-		?></span>
+          $a = new GlobalArea('Site Name');
+          $a->display();
+        ?>
+      </span>
+      <div class="justified-navbar">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <?php  
+                $headernav = new GlobalArea('Header Nav');
+                $headernav->display();
+              ?>  
+            </div>
+          </div>
+        </div>
       </div>
-	<div id="header">
-	
-	
-	
 
-		
-		
-	</div>
-	
+    </div>
+
+
+    
+    <div id="header">
+
+
+
+
+
+
+    </div>
+

@@ -2,11 +2,10 @@
 defined('C5_EXECUTE') or die("Access Denied.");
 $this->inc('elements/header.php'); ?>
 	
-	<div class="clear"></div>
+<div class="row">
+	<div class="span3">
 
-	<div id="left-sidebar-container" class="grid_8">
-
-		<div id="left-sidebar-inner">
+		<div class="well sidebar-nav">
 	
 			<?php  
 			$a = new Area('Sidebar');
@@ -15,19 +14,22 @@ $this->inc('elements/header.php'); ?>
 			
 		</div>
 	
-	</div>
-
-	<div id="main-content-container" class="grid_16">
-		<div id="main-content-inner">
+	</div>	
+	<div class="span9">
+	
 		
 			<?php  
 			$a = new Area('Main');
 			$a->display($c);
 			?>
 			
-		</div>
-	
 	</div>
+	<!-- end main-content container-->
+	
+	
+	<!-- end sidebar container-->
+	
+</div>
 	
 	<!-- end main content columns -->
 	

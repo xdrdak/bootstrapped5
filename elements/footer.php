@@ -1,11 +1,18 @@
 <?php   defined('C5_EXECUTE') or die("Access Denied."); ?>
 
 	
+	
+
+<!-- end main container -->
+
+</div>
+<div id="push"></div>
+</div>
 	<div id="footer" class="footer">
 	
 		<div id="footer-inner">
 		
-			<p class="footer-sign-in">
+			<div class="container">
 			<?php  
 			$u = new User();
 			if ($u->isRegistered()) { ?>
@@ -30,11 +37,8 @@
 	
 	</div>
 
-<!-- end main container -->
-
-</div>
-
+ <script src="<?php  echo $this->getThemePath(); ?>/js/vendor/bootstrap.js"></script>
 <?php   Loader::element('footer_required'); ?>
- <script src="<?php  echo $this->getThemePath(); ?>/js/vendor/bootstrap.min.js"></script>
+
 </body>
 </html>

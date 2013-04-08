@@ -3,10 +3,10 @@ defined('C5_EXECUTE') or die("Access Denied.");
 $this->inc('elements/header.php');
 $nav = Loader::helper('navigation');
 ?>
-
+<div class="row">
 	<div id="header-image">
 		
-		<div class="grid_24 alpha omega" id="featured-image-full">
+		<div class="span12" id="featured-image-full">
 			<?php 
 			
 			if ($c->isEditMode()) {
@@ -21,7 +21,7 @@ $nav = Loader::helper('navigation');
 	
 	<div class="clear"></div>
 
-	<div id="left-sidebar-container" class="grid_8">
+	<div id="left-sidebar-container" class="span3">
 
 		<div id="left-sidebar-inner">
 		
@@ -34,7 +34,7 @@ $nav = Loader::helper('navigation');
 	
 	</div>
 
-	<div id="main-content-container" class="grid_16">
+	<div id="main-content-container" class="span9">
 		<div id="main-content-inner">
 		
 			<h1><?php  echo $c->getCollectionName(); ?></h1>
@@ -80,5 +80,5 @@ $(function(){ window.print(); });
 <?php  } ?>
 	
 	<!-- end main content columns -->
-	
+</div>
 <?php  $this->inc('elements/footer.php'); ?>
